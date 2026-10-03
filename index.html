@@ -1350,6 +1350,363 @@
             font-style: italic;
         }
 
+
+
+        .compromisso-secao {
+            min-height: 100svh;
+            padding-top: 95px;
+            padding-bottom: 120px;
+        }
+
+        .compromisso-cabecalho {
+            margin-bottom: 48px;
+            text-align: center;
+        }
+
+        .compromisso-cabecalho small {
+            display: block;
+            margin-bottom: 12px;
+            color: var(--dourado);
+            font-size: 8px;
+            font-weight: 600;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .compromisso-cabecalho h2 {
+            color: var(--creme-claro);
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(45px, 10vw, 72px);
+            font-weight: 500;
+            line-height: .9;
+        }
+
+        .compromisso-papel {
+            position: relative;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: clamp(42px, 8vw, 72px) clamp(28px, 8vw, 74px);
+            overflow: hidden;
+            color: #35291f;
+            background:
+                radial-gradient(circle at 12% 14%, rgba(112, 79, 42, .12), transparent 24%),
+                radial-gradient(circle at 88% 82%, rgba(112, 79, 42, .1), transparent 27%),
+                linear-gradient(145deg, #f3e7d0, #e4d3b2);
+            box-shadow:
+                0 38px 85px rgba(0, 0, 0, .5),
+                inset 0 0 55px rgba(89, 62, 33, .05);
+            transform: rotate(.35deg);
+            animation: compromissoEntrar 1.3s cubic-bezier(.22, .61, .36, 1) both;
+        }
+
+        .compromisso-papel::before {
+            content: "";
+            position: absolute;
+            inset: 16px;
+            border: 1px solid rgba(82, 61, 37, .2);
+            pointer-events: none;
+        }
+
+        .compromisso-papel::after {
+            content: "♡";
+            position: absolute;
+            right: 30px;
+            top: 18px;
+            color: rgba(99, 54, 64, .16);
+            font-family: "Cormorant Garamond", serif;
+            font-size: 52px;
+            transform: rotate(12deg);
+            pointer-events: none;
+        }
+
+        @keyframes compromissoEntrar {
+            from {
+                opacity: 0;
+                transform: translateY(50px) rotate(2deg) scale(.98);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) rotate(.35deg) scale(1);
+            }
+        }
+
+        .compromisso-numero {
+            margin-bottom: 8px;
+            color: #806b52;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 14px;
+            font-style: italic;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        .compromisso-titulo {
+            margin-bottom: 8px;
+            color: #49372a;
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(31px, 7vw, 43px);
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .compromisso-subtitulo {
+            margin-bottom: 38px;
+            color: #806b52;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 17px;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .compromisso-papel p {
+            margin-bottom: 20px;
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(18px, 4.6vw, 21px);
+            line-height: 1.65;
+        }
+
+        .compromisso-abertura {
+            margin-bottom: 30px !important;
+            font-size: clamp(21px, 5vw, 25px) !important;
+        }
+
+        .compromisso-abertura::first-letter {
+            float: left;
+            margin: 7px 8px 0 0;
+            color: #633640;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 58px;
+            line-height: .7;
+        }
+
+        .compromisso-destaque {
+            margin: 34px 0;
+            padding: 22px 8px;
+            border-top: 1px solid rgba(95, 72, 45, .2);
+            border-bottom: 1px solid rgba(95, 72, 45, .2);
+            color: #633640;
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(24px, 5.8vw, 31px) !important;
+            font-style: italic;
+            line-height: 1.35 !important;
+            text-align: center;
+        }
+
+        .compromisso-artigo {
+            margin: 34px 0 25px;
+            color: #5d4936;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .compromisso-lista {
+            margin: 0 0 25px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .compromisso-lista li {
+            position: relative;
+            margin-bottom: 16px;
+            padding-left: 27px;
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(18px, 4.6vw, 21px);
+            line-height: 1.55;
+        }
+
+        .compromisso-lista li::before {
+            content: "♡";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: #8b4b58;
+            font-size: 17px;
+        }
+
+        .compromisso-ressalva {
+            margin: 30px 0 !important;
+            padding: 20px 22px;
+            border-left: 2px solid rgba(99, 54, 64, .42);
+            color: #604a37;
+            background: rgba(255, 249, 237, .22);
+            font-style: italic;
+        }
+
+        .compromisso-final {
+            margin-top: 36px !important;
+            color: #633640;
+            font-size: clamp(22px, 5vw, 28px) !important;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .compromisso-assinaturas {
+            position: relative;
+            margin-top: 48px;
+            padding-top: 34px;
+            border-top: 1px solid rgba(82, 61, 37, .2);
+        }
+
+        .compromisso-assinaturas::before {
+            content: "♡";
+            position: absolute;
+            top: -18px;
+            left: 50%;
+            padding: 0 10px;
+            color: #806b52;
+            background: #ead9bb;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 24px;
+            transform: translateX(-50%);
+        }
+
+        .assinatura-intro {
+            margin-bottom: 23px !important;
+            color: #5c4633;
+            text-align: center;
+        }
+
+        .campo-assinatura {
+            width: 100%;
+            min-height: 55px;
+            padding: 10px 15px;
+            border: 0;
+            border-bottom: 1px solid rgba(73, 55, 42, .55);
+            outline: none;
+            color: #633640;
+            background: transparent;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 25px;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .campo-assinatura::placeholder {
+            color: rgba(73, 55, 42, .4);
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        .campo-assinatura:focus {
+            border-bottom-color: #633640;
+        }
+
+        .compromisso-acoes {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .botao-assinar {
+            min-height: 52px;
+            padding: 13px 26px;
+            border: 1px solid rgba(99, 54, 64, .3);
+            border-radius: 999px;
+            color: var(--creme-claro);
+            background: linear-gradient(135deg, #633640, #7a4050);
+            box-shadow: 0 14px 30px rgba(72, 38, 44, .22);
+            font-size: 9px;
+            font-weight: 600;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            transition: transform .3s ease, box-shadow .3s ease;
+        }
+
+        .botao-assinar:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 38px rgba(72, 38, 44, .28);
+        }
+
+        .botao-voltar-carta {
+            min-height: 52px;
+            padding: 13px 24px;
+            border: 1px solid rgba(82, 61, 37, .25);
+            border-radius: 999px;
+            color: #604a37;
+            background: rgba(255, 249, 237, .2);
+            font-size: 9px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all .3s ease;
+        }
+
+        .botao-voltar-carta:hover {
+            border-color: rgba(99, 54, 64, .4);
+            background: rgba(255, 249, 237, .38);
+            transform: translateY(-2px);
+        }
+
+        .compromisso-selo {
+            display: none;
+            width: 105px;
+            height: 105px;
+            margin: 35px auto 0;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgba(99, 54, 64, .5);
+            border-radius: 50%;
+            color: #633640;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1.05;
+            letter-spacing: 1px;
+            text-align: center;
+            text-transform: uppercase;
+            transform: rotate(-9deg);
+            animation: seloEntrar .8s cubic-bezier(.22, .61, .36, 1) both;
+        }
+
+        .compromisso-selo.visivel {
+            display: flex;
+        }
+
+        @keyframes seloEntrar {
+            from {
+                opacity: 0;
+                transform: rotate(-18deg) scale(.5);
+            }
+
+            to {
+                opacity: 1;
+                transform: rotate(-9deg) scale(1);
+            }
+        }
+
+        .compromisso-confirmacao {
+            min-height: 28px;
+            margin-top: 15px !important;
+            color: #633640;
+            font-size: 17px !important;
+            font-style: italic;
+            text-align: center;
+            opacity: 0;
+            transition: opacity .5s ease;
+        }
+
+        .compromisso-confirmacao.visivel {
+            opacity: 1;
+        }
+
+        .compromisso-rodape {
+            max-width: 600px;
+            margin: 55px auto 0;
+            color: #cdbfa9;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 21px;
+            font-style: italic;
+            text-align: center;
+        }
+
         .rodape {
             position: relative;
             z-index: 10;
@@ -1517,6 +1874,39 @@
             .intro {
                 padding-left: 18px;
                 padding-right: 18px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .compromisso-papel {
+                margin-left: 3px;
+                margin-right: 3px;
+                padding-left: 28px;
+                padding-right: 28px;
+            }
+
+            .compromisso-papel::before {
+                inset: 10px;
+            }
+
+            .compromisso-papel::after {
+                right: 18px;
+                top: 12px;
+                font-size: 40px;
+            }
+
+            .compromisso-titulo {
+                letter-spacing: .5px;
+            }
+
+            .compromisso-acoes {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .botao-assinar,
+            .botao-voltar-carta {
+                width: min(100%, 280px);
             }
         }
 
@@ -1871,7 +2261,182 @@
                 <button class="botao-voltar" id="voltarParaInicio" type="button">
                     ♡ Voltar para nós dois
                 </button>
+
+                <button class="botao-carta" id="abrirCompromisso" type="button" style="margin-top: 12px;">
+                    ♡ Ler nosso compromisso
+                </button>
             </div>
+        </section>
+
+
+
+        <section class="secao compromisso-secao hidden" id="compromisso">
+            <header class="compromisso-cabecalho">
+                <small>
+                    Um documento para guardar entre nós
+                </small>
+
+                <h2>
+                    Carta de compromisso
+                </h2>
+            </header>
+
+            <article class="compromisso-papel">
+                <p class="compromisso-numero">
+                    Escrita em 3 de outubro de 2026
+                </p>
+
+                <h3 class="compromisso-titulo">
+                    Carta de Compromisso
+                </h3>
+
+                <p class="compromisso-subtitulo">
+                    Para dois corações que decidiram caminhar na mesma direção
+                </p>
+
+                <p class="compromisso-abertura">
+                    Meu amorzinho, existem documentos que servem para registrar negócios, datas e obrigações. Este não. Este existe somente para registrar uma vontade que mora em mim há algum tempo: a vontade de fazer da nossa história uma vida inteira.
+                </p>
+
+                <p>
+                    Eu quero casar com você. Quero viver aquele dia em que, depois de tantos planos, olhares e sonhos, nós finalmente estaremos diante de tudo aquilo que imaginamos juntos.
+                </p>
+
+                <p class="compromisso-destaque">
+                    Se depender do meu desejo, eu quero que o nosso casamento aconteça em 2027.
+                </p>
+
+                <p class="compromisso-ressalva">
+                    Mas deixo isto escrito da maneira mais sincera que consigo: 2027 é o ano que eu desejo, não uma cobrança. Não existe neste papel uma data que valha mais do que nós dois.
+                </p>
+
+                <p>
+                    Se a vida trouxer alguma circunstância que nos faça esperar, nós esperaremos. Se precisarmos mudar a data, mudaremos. Se for necessário recomeçar os planos, recomeçaremos. Eu não quero um calendário perfeito; quero que, quando o nosso dia chegar, ele seja verdadeiramente nosso.
+                </p>
+
+                <p class="compromisso-artigo">
+                    I — Da escolha
+                </p>
+
+                <p>
+                    Eu prometo continuar escolhendo você. Não somente nos dias bonitos, mas também nos dias comuns, nos dias cansativos e naqueles em que a vida parecer um pouco mais difícil.
+                </p>
+
+                <ul class="compromisso-lista">
+                    <li>Escolher você mesmo quando a rotina tentar transformar tudo em costume.</li>
+                    <li>Ouvir seus sonhos, respeitar seus medos e comemorar suas conquistas como se fossem minhas também.</li>
+                    <li>Segurar sua mão nos momentos em que você precisar de força e aceitar a sua mão quando for a minha vez de precisar.</li>
+                    <li>Fazer da nossa casa um lugar onde exista paz, carinho, risada e espaço para sermos exatamente quem somos.</li>
+                </ul>
+
+                <p class="compromisso-artigo">
+                    II — Do nosso dia
+                </p>
+
+                <p>
+                    Prometo que, quando chegar o dia do nosso casamento, eu vou olhar para você e lembrar de todas as versões de nós que precisaram existir para chegarmos até ali. Vou lembrar do começo, das conversas, das brincadeiras, das dificuldades, dos planos e de tudo aquilo que somente nós entendemos.
+                </p>
+
+                <p>
+                    E, mesmo que o vestido, a música, o lugar ou a data sejam diferentes daqueles que hoje imaginamos, quero que uma coisa permaneça exatamente igual: a pessoa diante de mim será você.
+                </p>
+
+                <p class="compromisso-artigo">
+                    III — Da vida depois do sim
+                </p>
+
+                <p>
+                    Eu não quero que o casamento seja o fim de uma história bonita. Quero que seja o começo da parte em que a gente descobre como é dividir a vida de verdade.
+                </p>
+
+                <p>
+                    Quero chegar em casa e encontrar você. Quero preparar alguma coisa para nós. Quero aparecer com um pequeno presente porque passei por algum lugar e lembrei de você. Quero conhecer nossas manias, nossas rotinas, nossos lugares preferidos e até aquelas pequenas implicâncias que provavelmente vão continuar existindo depois do casamento.
+                </p>
+
+                <p class="compromisso-destaque">
+                    Eu não quero somente casar com você. Quero continuar construindo a nossa vida depois que a festa acabar.
+                </p>
+
+                <p class="compromisso-artigo">
+                    IV — Dos dias difíceis
+                </p>
+
+                <p>
+                    Prometo não imaginar que amar é viver somente de dias perfeitos. Quando houver contas, trabalho, preocupação, cansaço, silêncio ou qualquer outro peso, quero me lembrar de que o problema está de um lado e nós dois estamos do outro.
+                </p>
+
+                <p>
+                    Não prometo nunca errar. Prometo tentar reconhecer quando eu errar. Não prometo saber sempre o que dizer. Prometo não deixar de tentar conversar. E não prometo que todos os dias serão fáceis; prometo que, enquanto pudermos, não deixarei de escolher caminhar ao seu lado.
+                </p>
+
+                <p class="compromisso-artigo">
+                    V — Do futuro
+                </p>
+
+                <p>
+                    Não sei exatamente onde estaremos daqui a cinco, dez ou vinte anos. Não sei quantas mudanças a vida vai colocar no nosso caminho. Mas existe uma parte desse futuro que eu consigo imaginar com uma clareza bonita: eu quero descobrir tudo isso com você.
+                </p>
+
+                <p>
+                    Se for 2027, eu vou agradecer por termos chegado até lá. Se for depois, eu vou agradecer do mesmo jeito, porque a espera nunca será maior do que a vontade de viver a vida inteira ao seu lado.
+                </p>
+
+                <p class="compromisso-destaque">
+                    A data pode mudar. O sonho pode precisar esperar. O nosso desejo, porém, continua sendo o mesmo: nós dois.
+                </p>
+
+                <p>
+                    Portanto, deixo registrado neste pequeno documento que eu quero casar com você, construir uma casa com você, formar uma família com você e envelhecer descobrindo novas razões para continuar te escolhendo.
+                </p>
+
+                <p>
+                    E se algum dia nós encontrarmos esta carta anos depois, espero que possamos olhar um para o outro e sorrir, sabendo que aquilo que começou como uma promessa escrita em uma folha acabou virando a nossa vida.
+                </p>
+
+                <p class="compromisso-final">
+                    Eu escolho você.<br>
+                    Eu quero me casar com você.<br>
+                    Eu quero uma vida nossa.
+                </p>
+
+                <div class="compromisso-assinaturas">
+                    <p class="assinatura-intro">
+                        Se você quiser guardar este momento comigo, escreva seu nome abaixo e assine este pequeno compromisso do nosso jeito.
+                    </p>
+
+                    <input
+                        class="campo-assinatura"
+                        id="campoAssinatura"
+                        type="text"
+                        maxlength="60"
+                        autocomplete="off"
+                        placeholder="Escreva seu nome aqui..."
+                        aria-label="Sua assinatura"
+                    >
+
+                    <div class="compromisso-acoes">
+                        <button class="botao-assinar" id="botaoAssinar" type="button">
+                            ♡ Assinar nosso compromisso
+                        </button>
+
+                        <button class="botao-voltar-carta" id="voltarParaCarta" type="button">
+                            Voltar para a cartinha
+                        </button>
+                    </div>
+
+                    <div class="compromisso-selo" id="compromissoSelo" aria-hidden="true">
+                        Aceito<br>
+                        nosso<br>
+                        compromisso
+                    </div>
+
+                    <p class="compromisso-confirmacao" id="compromissoConfirmacao" aria-live="polite"></p>
+                </div>
+            </article>
+
+            <p class="compromisso-rodape">
+                Que 2027 seja o ano que hoje desejamos. E que, se a vida escolher outro momento para nós, a única coisa que nunca mude seja a vontade de continuar escrevendo essa história juntos.
+            </p>
         </section>
 
         <footer class="rodape">
@@ -1904,6 +2469,13 @@
             abrirCarta: document.getElementById("abrirCarta"),
             voltarReverFinal: document.getElementById("voltarReverFinal"),
             voltarParaInicio: document.getElementById("voltarParaInicio"),
+            abrirCompromisso: document.getElementById("abrirCompromisso"),
+            compromisso: document.getElementById("compromisso"),
+            botaoAssinar: document.getElementById("botaoAssinar"),
+            campoAssinatura: document.getElementById("campoAssinatura"),
+            compromissoSelo: document.getElementById("compromissoSelo"),
+            compromissoConfirmacao: document.getElementById("compromissoConfirmacao"),
+            voltarParaCarta: document.getElementById("voltarParaCarta"),
             particulas: document.getElementById("particulas"),
             flashRomantico: document.getElementById("flashRomantico"),
             transicaoCena: document.getElementById("transicaoCena")
@@ -1937,6 +2509,8 @@
             iniciou: false,
             respondeu: false,
             cartaAberta: false,
+            compromissoAberto: false,
+            compromissoAssinado: false,
             tentativasNao: 0,
             intervaloParticulas: null
         };
@@ -2222,9 +2796,79 @@
             }, 300);
         }
 
+        function abrirCompromissoRomantico() {
+            estado.compromissoAberto = true;
+
+            transicaoCena();
+
+            elementos.carta.classList.add("hidden");
+            elementos.compromisso.classList.remove("hidden");
+
+            explosaoParticulas(35);
+
+            const assinaturaSalva = localStorage.getItem("compromisso_assinatura");
+
+            if (assinaturaSalva) {
+                elementos.campoAssinatura.value = assinaturaSalva;
+                elementos.compromissoSelo.classList.add("visivel");
+                elementos.compromissoConfirmacao.textContent = `Assinado por ${assinaturaSalva}. Que seja apenas o começo.`;
+                elementos.compromissoConfirmacao.classList.add("visivel");
+            }
+
+            setTimeout(() => {
+                elementos.compromisso.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }, 300);
+        }
+
+        function assinarCompromisso() {
+            const nome = elementos.campoAssinatura.value.trim();
+
+            if (!nome) {
+                elementos.campoAssinatura.focus();
+                elementos.campoAssinatura.animate(
+                    [
+                        { transform: "translateX(-5px)" },
+                        { transform: "translateX(5px)" },
+                        { transform: "translateX(-3px)" },
+                        { transform: "translateX(0)" }
+                    ],
+                    { duration: 350, easing: "ease" }
+                );
+                return;
+            }
+
+            estado.compromissoAssinado = true;
+            localStorage.setItem("compromisso_assinatura", nome);
+
+            elementos.compromissoSelo.classList.add("visivel");
+            elementos.compromissoConfirmacao.textContent = `Assinado por ${nome}. Agora este pequeno papel também faz parte da nossa história.`;
+            elementos.compromissoConfirmacao.classList.add("visivel");
+
+            explosaoParticulas(25);
+            transicaoCena();
+        }
+
+        function voltarParaCartaRomantica() {
+            transicaoCena();
+
+            elementos.compromisso.classList.add("hidden");
+            elementos.carta.classList.remove("hidden");
+
+            setTimeout(() => {
+                elementos.carta.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }, 300);
+        }
+
         function resetarExperiencia() {
             estado.respondeu = false;
             estado.cartaAberta = false;
+            estado.compromissoAberto = false;
             estado.tentativasNao = 0;
             estado.faixaAtual = 0;
 
@@ -2233,6 +2877,7 @@
 
             elementos.final.classList.add("hidden");
             elementos.carta.classList.add("hidden");
+            elementos.compromisso.classList.add("hidden");
 
             restaurarBotaoNao();
 
@@ -2292,9 +2937,34 @@
             resetarExperiencia
         );
 
+        elementos.abrirCompromisso.addEventListener(
+            "click",
+            abrirCompromissoRomantico
+        );
+
+        elementos.botaoAssinar.addEventListener(
+            "click",
+            assinarCompromisso
+        );
+
+        elementos.voltarParaCarta.addEventListener(
+            "click",
+            voltarParaCartaRomantica
+        );
+
         elementos.voltarParaInicio.addEventListener(
             "click",
             resetarExperiencia
+        );
+
+        elementos.campoAssinatura.addEventListener(
+            "keydown",
+            event => {
+                if (event.key === "Enter") {
+                    event.preventDefault();
+                    assinarCompromisso();
+                }
+            }
         );
 
         elementos.botaoNao.addEventListener(
